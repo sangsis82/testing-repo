@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-grid slds-p-around_small">
+        <p> The parent component value is {searchstring}</p>
+<!--       <lightning-input type="search" name="searchacc"  onchange={handleaccChange} ></lightning-input>-->
+<template if:false={showPill}>
+    <lightning-combobox name="types" label="Accountlist" value={value} options={Combo_options} onchange={handleTypeChange}> </lightning-combobox> 
+
+</template>
+<template if:true={showPill}>
+    <!--<lightning-pill
+        label={selectedvalue}
+        onremove={handleRemoveOnly}
+        onclick={handleClick}
+        name={selectedvalue}
+    >
+    </lightning-pill>-->
+    <lightning-pill class="pillSize slds-pill_bare" label={selectedvalue} name={selectedvalue} onremove={handleRemoveOnly} href={href}>
+        <lightning-icon icon-name={iconName} alternative-text="acc" ></lightning-icon>
+    </lightning-pill>
+</template>
+    </div>
+</template>

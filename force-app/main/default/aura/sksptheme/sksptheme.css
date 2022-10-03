@@ -1,0 +1,45 @@
+.THIS .contentPanel:before,
+.THIS .contentPanel:after {
+    content: " ";
+    display: table;
+}
+.THIS .contentPanel:after {
+    clear: both;
+}
+.THIS .contentPanel {
+    background-color:#EDF5FF;
+}
+
+.THIS .centerheader {
+    width: 100%;
+}
+.THIS .bottonfooter {
+    float: left;
+    width: 100%;
+}
+
+.THIS .left {
+    width: 75%;
+}
+.THIS .right {
+    width: 25%;
+}
+.THIS .column1 {
+    float: left;
+    width: 75%;
+    background-color:#fff;
+    border:1px solid red;
+    margin:auto;
+}
+.THIS .column2 {
+    float: left;
+    width: 25%;
+    margin:auto;
+
+}
+
+.THIS .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

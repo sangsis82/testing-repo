@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  title="Hello">
+        <p class="slds-p-horizontal_small">Create Record (custom component)</p>
+        <lightning-record-form   object-api-name={objectApiName} fields={fields} onsuccess={handleSuccess}
+>
+</lightning-record-form>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+
+</template>

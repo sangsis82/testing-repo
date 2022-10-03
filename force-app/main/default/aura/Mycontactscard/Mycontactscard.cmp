@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hassObjectName" access="global" controller="getmyContacts" >
+    
+<aura:attribute name="Mycontacts" type="Contact[]" default="[]"></aura:attribute>
+ <aura:attribute name="SearchKey" type="String"></aura:attribute>
+    <lightning:input name="Searchtext" value="{!v.SearchKey}" />
+     <aura:attribute name="Key" type="String"></aura:attribute>
+
+		<lightning:button variant="Update" label="Update" title="Brand action" onclick="{! c.doAdd }" class="slds-button slds-button_outline-brand" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+ welcome {!v.Key} 
+<div class="slds-grid slds-wrap ">
+
+        <aura:iteration items="{!v.Mycontacts}" var="contact">
+  <div class=" slds-col slds-size_1-of-3	">
+        <lightning:card  title="{!contact.Name}" class=" slds-p-around_small slds-m-around_small ">
+                <a href="{! '#contact/' + contact.Id }">
+                    <p>{!contact.Firstname}</p>
+                    <p>{!contact.Phone}</p>
+                </a>
+            <lightning:button label="ViewDetails"  name='{!contact.Id}' variant="brand" onclick="{!c.doNavigation}" class="slds-button" />
+    </lightning:card>
+      <br/>   
+    
+            </div>
+
+                    </aura:iteration>
+    </div>
+
+</aura:component>

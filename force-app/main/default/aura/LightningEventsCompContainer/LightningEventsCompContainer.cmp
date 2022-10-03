@@ -1,0 +1,13 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" >
+        <aura:attribute name="totalIncome" type="Decimal"/>
+    <aura:handler name="totalIncomeComponentEvent" event="c:LightningComponentEvent" action="{!c.handleRegisteredComponentEvent}"/>
+Outer Component
+    <div class="innerComponent">
+        Inner Component section Begin
+
+    <c:LightningEventsComp1></c:LightningEventsComp1>
+        Inner Component section end
+
+       </div> 
+    <div> Total Income : {!v.totalIncome}</div>
+</aura:component>

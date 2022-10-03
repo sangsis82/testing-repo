@@ -1,0 +1,32 @@
+<aura:component implements="forceCommunity:layout" description="Custom Content Layout" access="global">
+    <aura:attribute name="header" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="bottom" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="leftVal" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="cernterVal" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="rightVal" type="Aura.Component[]" required="false"></aura:attribute>
+    
+    <div class="container">
+        <div class="contentPanel">
+            <div class="centerheader">
+                {!v.header}
+                Header  Component  <c:Headercomponent />
+
+            </div>
+            <div class="row">
+                <div class="column1 " padding="around-small">
+                    <c:Jobtext />
+
+                    {!v.leftVal}
+                    Component used in markup <c:sample_HelloWorld />
+
+                </div>
+                <div class="column2">
+                    {!v.rightVal}
+                </div>
+            </div>
+            <div class="bottonfooter">
+                {!v.bottom}
+            </div>
+        </div>
+    </div>
+</aura:component>

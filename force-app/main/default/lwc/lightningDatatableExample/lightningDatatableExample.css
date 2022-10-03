@@ -1,0 +1,16 @@
+.dummy{
+	color : blue;
+}
+.THIS .datatable{
+   max-height:70px;  
+    text-align: center;
+    border-bottom: 0px;
+    overflow-x: auto !important;
+}
+.THIS .data{
+    width:50px;
+    max-height:70px;  
+    text-align: center;
+    box-sizing: content-box;
+
+}

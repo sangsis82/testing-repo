@@ -1,0 +1,5 @@
+<apex:page controller="OAuthCode_Format">
+    <apex:form >
+        <apex:commandbutton value="code" action="{requestcode}" />
+    </apex:form>
+</apex:page>

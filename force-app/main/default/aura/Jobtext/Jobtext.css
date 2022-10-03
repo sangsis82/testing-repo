@@ -1,0 +1,75 @@
+.THIS aside{
+    float:left;
+}
+.THIS  .job-slist{
+        width:35%;
+    float:right;
+    padding:18px 20px;
+}
+.THIS  .jobtext{
+        width:65%;
+    float:left;
+        padding: 18px 10px 18px;
+
+    
+}
+.THIS .jobtext h3{
+    color:#54698d;
+}
+
+.THIS .slds-item{
+    color:#143058;
+    padding:15px 0px 8px;
+}
+.THIS .jobcontent h4 {
+  color:#143058;  
+}
+.THIS aside .jobcontent{
+    padding:20px 8px 8px 8px;
+}
+
+.THIS  .joblist{
+    margin: 4px 0px 5px;
+}
+.THIS aside .jobcontent h4{
+    margin-bottom:0px;
+}
+
+.THIS .jobimg{
+    width:100%;
+        display:block;
+    margin-bottom:15px;
+}
+
+.THIS .jcontent p{
+     font-size:16px;
+}
+.THIS .fltrgt{
+    float:right;
+}
+.THIS .fltlft{
+    float:left;
+}
+.THIS .joblist  .jcontent{
+    width:70%;
+    padding-right:10px;
+}
+
+.THIS .jcontimg{
+    padding-left:10px;
+    overflow:hidden;
+}
+.THIS .jcontimg img{
+    width:80px;
+    heigth:65px;
+}
+.THIS .greytext{
+    color:grey;
+    
+}
+.THIS .bluetext{
+    color:#143058;
+}
+.THIS .menulist a{
+    display:inline-block;
+}

@@ -1,0 +1,57 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global"> 
+    <div class="slds-grid">       
+   <section class="main">
+       <div class=" jobtext">
+           	<h3 class="titlesize">Jobs</h3>
+
+    <aside>
+      <div class="jobcontent">
+          <img src="{!$Resource.jobtitleimg}" class="jobimg"/>
+          <h4>Greeting</h4>
+          <p> Test content for job componenet</p>
+      </div>
+    </aside>
+    <aside>
+      <div class="jobcontent">
+          <img src="{!$Resource.jobtitleimg}" class="jobimg"/>  
+          <h4>Greeting</h4>
+          <p> Test content for job componenet</p>
+     
+      </div>
+   </aside>
+    <aside>
+      <div class="jobcontent">
+           <img src="{!$Resource.jobtitleimg}" class="jobimg" />
+          <h4>Greeting</h4>
+          <p> Test content for job componenet</p>
+     
+      </div>
+   </aside>
+    <aside>
+
+      <div class="jobcontent">
+          <img src="{!$Resource.jobtitleimg}" class="jobimg"/>
+          <h4>Greeting</h4>
+          <p> Test content for job componenet</p>
+     
+      </div>
+   </aside>
+</div>
+<div class="job-slist">
+    <div class="menulist">
+     <a href="#" title="Show All" ><h6 class="bluetext">Show All |</h6></a>
+     <span class="greytext"> Sort by </span>
+     <a href="#" title="Latest Info"><h6 class="bluetext">Latest Info</h6></a> </div>
+<ul class="slds-has-dividers_bottom">
+  <li class="slds-item"><div class="joblist"><div class="jcontent"><p class="fltlft">Lorem Ipsum Dolor Sit Amet</p></div><div class="jcontimg"><img src="{!$Resource.jobtitleimg}" class="fltrgt" /> </div></div></li>
+    <li class="slds-item"><div class="joblist"><div class="jcontent"><p class="fltlft">Lorem Ipsum Dolor Sit Amet</p></div><div class="jcontimg"><img src="{!$Resource.jobtitleimg}" class="fltrgt" /></div></div></li>
+    <li class="slds-item"><div class="joblist"><div class="jcontent"><p class="fltlft">Lorem Ipsum Dolor Sit Amet</p></div><div class="jcontimg"><img src="{!$Resource.jobtitleimg}" class="fltrgt" /> </div></div></li>
+    <li class="slds-item"><div class="joblist"><div class="jcontent"><p class="fltlft">Lorem Ipsum Dolor Sit Amet</p></div><div class="jcontimg"><img src="{!$Resource.jobtitleimg}" class="fltrgt" /></div></div></li>
+</ul>
+       </div>
+   </section> 
+
+
+
+    </div>
+</aura:component>

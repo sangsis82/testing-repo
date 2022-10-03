@@ -1,0 +1,68 @@
+<template>
+   <lightning-card  titlte="My First Lightning Web Componenet " icon-name="custom:custom4">
+       <lightning-layout vertical-align="center">
+           <lightning-layout-item padding="around-small">
+               <lightning-formatted-text value={name}></lightning-formatted-text>
+           </lightning-layout-item>
+           <lightning-layout-item padding="around-small">
+            <lightning-formatted-text value={title}></lightning-formatted-text>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <lightning-formatted-email value={email}></lightning-formatted-email>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+        </lightning-layout-item>
+               
+       </lightning-layout>
+       <lightning-layout vertical-align="center">
+        <lightning-layout-item padding="around-small">
+            <lightning-button label="Call JS"   onclick={handleapexCall} variant="brand"></lightning-button>
+            <template if:true={objects}>success
+                <template for:each={objects} for:item="object">
+                    <lightning-layout vertical-align="center" key={object.key}>
+                        <li>
+                            {object.key}
+                            {object.value}
+                        </li>
+                    </lightning-layout>
+                </template>
+            </template>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <template for:each={contacts} for:item="con">
+                <lightning-layout vertical-align="center" key={con.Id}>
+                    <li>
+                        {con.Name}
+                        {con.Id}
+                    </li>
+                </lightning-layout>
+            </template>
+        
+        </lightning-layout-item>
+    </lightning-layout>
+
+   </lightning-card>
+
+   <lightning-card title="Search Account" icon-name="custom:custom57">
+    <div class="slds-m-around_medium">
+        <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"></lightning-input>
+        
+        <template if:true={accounts.data}>
+            <template for:each={accounts.data} for:item="acc">
+                <lightning-layout vertical-align="center" key={acc.id}>
+                    <li>
+                        {acc.Name}
+                        {acc.AccountNumber}
+                    </li>
+                </lightning-layout>
+            </template>
+        </template>
+    </div>
+        <lightning-layout-item padding="around-small">
+      <c-hello-World></c-hello-World>
+        </lightning-layout-item>
+    
+</lightning-card>
+
+</template>

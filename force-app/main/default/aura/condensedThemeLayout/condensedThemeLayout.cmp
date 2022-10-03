@@ -1,0 +1,30 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <aura:attribute name="search" type="Aura.Component[]"/>
+        <aura:attribute name="content" type="Aura.Component[]"/>
+    <aura:attribute name="sidebarFooter" type="Aura.Component[]"/>
+<div class="slds-grid slds-wrap">
+    
+    <div class="slds-col slds-size_12-of-12">
+        <div class="slds-grid slds-gutters">
+                       
+        <div class="logoContainer slds-col"  padding="around-medium"></div>
+
+                    <!-- placeholder for logo -->
+       <div class="slds-col" padding="around-medium">  {!v.search}</div>
+                </div>
+    </div>
+   <div class="slds-col slds-size_8-of-12"  padding="around-medium">
+
+               <lightning:layout>        
+    <lightning:layoutItem  class="slds-col  theme_bg_color" padding="around-large">
+    {!v.content}
+                   </lightning:layoutItem>
+    </lightning:layout>
+    </div>
+       <div class="slds-col slds-size_4-of-12 theme_foot_bg_color" padding="around-large">
+           {!v.sidebarFooter}
+    </div>
+
+ </div>
+ 
+</aura:component>

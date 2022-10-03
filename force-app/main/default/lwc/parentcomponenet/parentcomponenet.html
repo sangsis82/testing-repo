@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid">
+      <h2> Account names in our site</h2>
+      <lightning-input type="search" name="searchname"  onchange={handletextChange}></lightning-input>
+      <p>{searchvalue}</p>
+        </div>
+        <template if:true={searchvalue}>
+
+        <c-childcomponent searchstring={searchvalue} onlookupupdate={handlelookupvalue}></c-childcomponent>
+        <p>The value from child is </p>
+        <div class="slds-p-horizontal_medium">
+           <!-- <lightning-combobox name="types" label="Type" value={value} options={TypeOptions} onchange={handleTypeChange}> </lightning-combobox> -->
+         <lightning-input name="accname" value={selectedaccname} label="Account Name"></lightning-input>
+        </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="whom" type="String" default="Welcome to aura" access="public" />
+	<aura:attribute name="Age" type="Integer" default="32" access="public" />
+	<aura:attribute name="input1" type="Integer" access="public" />
+	<aura:attribute name="input2" type="Integer" access="public" />
+	The name is {!v.whom} and the age is {!v.Age}
+	<div class="slds-form">
+		<div class="slds-form-element slds-form-element_horizontal">
+			<label class="slds-form-element__label" for="horizontal-input-id-01">Enter value 1</label>
+			<lightning:input type="number" value='{!v.input1}' /> </div>
+		<div class="slds-form-element slds-form-element_horizontal">
+			<label class="slds-form-element__label" for="horizontal-input-id-01">Enter value 2</label>
+			<lightning:input type="number" value='{!v.input2}' /> </div>
+		<lightning:button variant="Add" label="Add" title="Brand action" onclick="{! c.doAdd }" class="slds-button slds-button_outline-brand" />
+		<lightning:button variant="Sub" label="Sub" title="Brand action" onclick="{! c.doSub }" class="slds-button slds-button_outline-brand" />
+		<lightning:button variant="Multiply" label="Multiply" title="Brand action" onclick="{! c.doMultiply }" class="slds-button slds-button_outline-brand" />
+		<lightning:button variant="Division" label="Division" title="Brand action" onclick="{! c.doDivision }" class="slds-button slds-button_outline-brand" />
+		<div class="slds-form-element slds-form-element_horizontal">
+			<label class="slds-form-element__label" for="horizontal-input-id-01">The result is</label>
+			<lightning:input type="number" aura:id="output_val" label="Result " /> </div>
+	</div>
+</aura:component>

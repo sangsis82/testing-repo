@@ -1,0 +1,6 @@
+<aura:component >
+		  <div class="slds-grid" pading="around-small">
+            <h2> Hearder region  Arch</h2>
+    </div>
+
+</aura:component>

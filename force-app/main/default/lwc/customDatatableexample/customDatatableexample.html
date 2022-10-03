@@ -1,0 +1,64 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+    <p class="slds-p-horizontal_small">Card Body Narrow (custom component){logo}</p>
+            <template if:true={accountlogo}>
+            <ul>
+                <li for:each={accountlogo} for:item="acc" key={acc.Id}>
+                    <img src='{acc.Logo__c}' title="img" style="height:30px;" ></li>
+            </ul>
+        </template>
+
+    <p slot="footer">Card Footer</p>
+                <div class="slds-col">
+                <span></span>
+            </div>
+    <div class="slds-col">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <thead>
+                <tr class="slds-line-height_reset">
+                  <th scope="col">
+                 <div class="slds-truncate" title="Id">Id</div>
+                 </th>
+                 <th scope="col">
+                 <div class="slds-truncate" title="First Name">First Name</div>
+                 </th>
+                  <th scope="col">
+                 <div class="slds-truncate" title="Last Name">Last Name</div>
+                 </th>
+                  <th scope="col">
+                 <div class="slds-truncate" title="Phone">Phone</div>
+                 </th>
+                  <th scope="col">
+                 <div class="slds-truncate" title="Email">Email</div>
+                 </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <template for:each={data} for:item="con">
+                      <tr key={con.Id}>
+                          <th scope="col">
+                              <div>{con.Id}</div>
+                           </th>
+
+                          <th scope="col">
+                              <div>{con.FirstName}</div>
+                           </th>
+                    <th scope="col">
+                              <div>{con.LastName}</div>
+                     </th>
+                    <th scope="col">
+                            <div>
+                                <lightning-formatted-phone value={con.Phone}></lightning-formatted-phone>
+                            </div>
+                           </th>
+                                                 <th scope="col">
+                                <lightning-formatted-email value={con.Email}></lightning-formatted-email>
+                           </th>
+                      </tr>    
+                  </template>
+                  </tbody>
+          </table>
+
+    </div>
+</lightning-card>
+</template>

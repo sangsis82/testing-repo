@@ -1,0 +1,20 @@
+<template>
+<h2>Account List</h2>
+<template if:true={accList}>
+    <div class="slds-scrollable " style="height:25rem;width:900px">
+  <div class="slds-text-longform" style="width:150%">
+
+ <lightning:layout>
+        <lightning-datatable data={accList} columns={columns} key-field="Id" onsave={handleSave}
+                    draft-values={draftValues}>
+
+        </lightning-datatable>
+</lightning:layout> 
+</div>    
+</div>
+
+</template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

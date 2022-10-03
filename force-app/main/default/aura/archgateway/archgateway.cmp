@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" >
+        <aura:handler event="c:setExpId" action="{!c.getexpid}"/>    
+        <aura:attribute name="expid" type="String" required="false" description="The branding experience ID" />        
+        <aura:renderIf isTrue="{!v.expid}">
+            <div class="leftImageStyle">    
+                <img src="{!$Resource.Archgateway }"/>
+            </div>
+        </aura:renderIf>
+</aura:component>

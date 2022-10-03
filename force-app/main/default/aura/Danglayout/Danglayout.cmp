@@ -1,0 +1,36 @@
+<aura:component implements="lightning:homeTemplate" access="global"  description="Dang Layout">
+    <aura:attribute name="header" type="Aura.Component[]"/>
+    <aura:attribute name="left_col" type="Aura.Component[]"/>
+    <aura:attribute name="mid_col" type="Aura.Component[]"/>
+    <aura:attribute name="right_col" type="Aura.Component[]"/>
+    <aura:attribute name="footer" type="Aura.Component[]"/>
+  
+    <div>
+        <!--Row1-->
+   <lightning:layout>        
+    <lightning:layoutItem size="12" class="slds-p-around_small">
+        {!v.header}
+     </lightning:layoutItem>
+    </lightning:layout>
+                <!--Row2-->
+   <lightning:layout>        
+    <lightning:layoutItem size="{: $Browser.isDesktop?'4':'12'}" class="slds-p-around_large">
+        {!v.left_col}
+     </lightning:layoutItem>
+    <lightning:layoutItem size="{: $Browser.isDesktop?'4':'12'}" class="slds-p-around_large">
+        {!v.mid_col}
+     </lightning:layoutItem>
+    <lightning:layoutItem size="{: $Browser.isDesktop?'4':'12'}" class="slds-p-around_large">
+        {!v.right_col}
+     </lightning:layoutItem>
+
+        </lightning:layout>
+        <!--Row3-->
+   <lightning:layout>        
+    <lightning:layoutItem size="12" class="slds-p-around_small">
+        {!v.footer}
+     </lightning:layoutItem>
+    </lightning:layout>
+
+    </div>
+</aura:component>

@@ -1,0 +1,11 @@
+.THIS {
+}
+.THIS .meet{
+        border: 1px solid;
+padding: 10px;
+  box-shadow: 5px 10px;
+background:#02729e;
+text-align:center; line-height:1.2em;color:#fff;}
+
+.THIS .titlecolor {background-color:rgb(2, 114, 158);}
+	.THIS .h5{ text-align:center; line-height:1.2em;color:#fff;}
